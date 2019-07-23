@@ -1,0 +1,2 @@
+# AVSNDMAKPTypescript
+Learning Typescript
