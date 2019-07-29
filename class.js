@@ -1,13 +1,54 @@
 "use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 exports.__esModule = true;
+var journal_1 = require("./journal");
 //start class statement
-var Courses = /** @class */ (function () {
+var Courses = /** @class */ (function (_super) {
+    __extends(Courses, _super);
     function Courses(author) {
-        this.author = author;
+        var _this = _super.call(this) || this;
+        _this.author = author;
         console.log('Hello world!');
+        return _this;
         // this.author = auth;
     }
     ;
+    Courses.prototype.publishedDate = function () {
+        console.log('published on jan');
+    };
+    ;
+    Courses.prototype.CreateJournal = function () {
+        if (this.day) {
+            console.log(this.day);
+        }
+    };
+    ;
+    Courses.prototype.JK = function () {
+        if (this.title) {
+            console.log(this.title);
+        }
+        ;
+    };
+    ;
+    Object.defineProperty(Courses.prototype, "J", {
+        get: function () {
+            return this.JK();
+        },
+        enumerable: true,
+        configurable: true
+    });
     Courses.prototype.courseTitle = function () {
         var data = this.title;
         if (this.title) {
@@ -59,11 +100,11 @@ var Courses = /** @class */ (function () {
     });
     ;
     return Courses;
-}());
+}(journal_1.Journal));
 exports.Courses = Courses;
 ; //end class statement
 ///////////////////////////////////////////create a new instance//////////////////////
-var course = new Courses('Manish');
+// let course:Courses = new Courses('Manish');
 // course.title = 'Zero to one';
 // course.coursePrice = 400;
 // Courses.email = 'manyabhai@gmail.com';

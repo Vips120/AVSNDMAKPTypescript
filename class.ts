@@ -1,13 +1,33 @@
+import {Journal} from './journal';
 //start class statement
-export class Courses {
+export class Courses extends Journal {
     public title:string;
-    private price:number;
+    protected price:number;
     static email:string;
     static area:string;
+    public day:string;
     constructor(private author:string){
+        super();
         console.log('Hello world!');
         // this.author = auth;
     };
+ public publishedDate(){
+     console.log('published on jan');
+ };
+
+ public CreateJournal(){
+  if(this.day){console.log(this.day)}
+ };
+ protected JK(){
+if(this.title){
+    console.log(this.title);
+};
+ };
+
+ get J(){
+     return this.JK();
+ };
+
     public courseTitle():string{
         let data = this.title;
         if(this.title){console.log(data)}
@@ -50,7 +70,7 @@ get Author(){
 
 }; //end class statement
 ///////////////////////////////////////////create a new instance//////////////////////
-let course:Courses = new Courses('Manish');
+// let course:Courses = new Courses('Manish');
 // course.title = 'Zero to one';
 // course.coursePrice = 400;
 // Courses.email = 'manyabhai@gmail.com';
