@@ -1,11 +1,15 @@
 import {Journal} from './journal';
+import * as allRefer from './userRegister';
 //start class statement
-export class Courses extends Journal {
+export class Courses extends Journal implements allRefer.Ilogin {
     public title:string;
     protected price:number;
     static email:string;
     static area:string;
     public day:string;
+    public userId:string;
+    public emailId:string;
+    public userLogin
     constructor(private author:string){
         super();
         console.log('Hello world!');
@@ -13,6 +17,8 @@ export class Courses extends Journal {
     };
  public publishedDate(){
      console.log('published on jan');
+     if(this.userId){console.log(this.userId)}
+     if(this.emailId) {console.log(this.emailId)}
  };
 
  public CreateJournal(){

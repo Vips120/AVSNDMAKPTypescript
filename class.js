@@ -27,6 +27,12 @@ var Courses = /** @class */ (function (_super) {
     ;
     Courses.prototype.publishedDate = function () {
         console.log('published on jan');
+        if (this.userId) {
+            console.log(this.userId);
+        }
+        if (this.emailId) {
+            console.log(this.emailId);
+        }
     };
     ;
     Courses.prototype.CreateJournal = function () {
@@ -49,6 +55,7 @@ var Courses = /** @class */ (function (_super) {
         enumerable: true,
         configurable: true
     });
+    ;
     Courses.prototype.courseTitle = function () {
         var data = this.title;
         if (this.title) {

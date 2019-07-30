@@ -6,4 +6,5 @@ var Journal = /** @class */ (function () {
     return Journal;
 }());
 exports.Journal = Journal;
+;
 // let j = new Journal();

@@ -43,9 +43,12 @@ var EncycloPedia = /** @class */ (function (_super) {
 }(class_1.Courses));
 var Pedia = new EncycloPedia(200, 'jackma');
 class_1.Courses.email = 'jack@gmail.com';
+Pedia.emailId = 'vs@gmail.com';
+Pedia.userId = 'vs@123';
 Pedia.coursePrice = 500;
 Pedia.title = 'Something Strange';
 Pedia.day = "Monday";
+Pedia.publishedDate();
 Pedia.Author;
 Pedia.CourseUser();
 Pedia.coursePublishDetails();
